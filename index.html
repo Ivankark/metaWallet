@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Заявка на экскурсионный полёт на Марс</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.serialize-object.min.js"></script>
+    <script src="js/maskedinput.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                <h1>Заявка на экскурсионный полёт на Марс</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-xs-12 col-md-3 col-md-push-8">
+                <h3 class="question-header">Почему стабильно солнечное затмение?</h3>
+                <p>Эффективный диаметр жизненно вызывает случайный эффективный радиус, а время ожидания ответа составило бы 80 миллиардов лет.</p>
+            </div>
+            <div class="col-xs-12 col-md-8 col-md-pull-4">
+
+                <form role="form" id="form" class="form-horizontal application-form drop-shadow" method="GET">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputFamily">Фамилия</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="form_field_family" class="form-control" id="InputFamily">
+                            <label><input type="checkbox" value="Нет" name="form_field_checkbox" id="checkFamily" class="checkFamily"><span>ранее менялась</span></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputName">Имя</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="form_field_name" class="form-control" id="InputName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputMiddleName">Отчество</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="form_field_MiddleName" class="form-control" id="InputMiddleName">
+                            <div class="help-block">
+                                <p class="help-block__shadow-down">Если вы не хотите лететь в багажном отсеке, пожалуйста, укажите ваше отчество.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputLatinFamily">Фамилия латиницей</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="form_field_LatinFamily" class="form-control" id="InputLatinFamily">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputLatinName">Имя латиницей</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="form_field_LatinName" class="form-control" id="InputLatinName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputDateBirth">Дата рождения</label>
+                        <div class="col-sm-6">
+                            <select size="1" name="form_field_DateBirth" id="InputDateBirth">
+                <option value="20.07.1985">20.07.1985</option> 
+            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Пол</label>
+                        <div class="col-sm-6">
+                            <label>
+              <input type="radio" value="Мужчина" name="form_field_gender" checked><span class="male">Мужчина</span>
+          </label><!-- Do not delete comment!
+          
+          --><label>
+              <input type="radio" value="Женщина" name="form_field_gender"><span class="female">Женщина</span>
+          </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputFamilyStatus">Семейное положение</label>
+                        <div class="col-sm-6">
+                            <select size="1" name="form_field_FamilyStatus" id="InputFamilyStatus">
+                <option value="женат">женат</option>    
+                <option value="в гражданском браке">в &#171;гражданском браке&#187;</option>  
+                <option value="разведён">разведён</option>  
+                <option value="холост">холост</option>  
+                <option value="вдовец">вдовец</option>  
+            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputEducation">Образование</label>
+                        <div class="col-sm-6">
+                            <select size="1" name="form_field_education" id="InputEducation">
+                <option value="высшее">высшее</option>
+                <option value="среднее специальное">среднее специальное</option>        
+                <option value="среднее">среднее</option>
+                <option value="студент">студент</option>    
+            </select>
+                        </div>
+                    </div>
+                    <h3 class="col-sm-offset-3 col-sm-9">Контактная информация</h3>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputPhone">Моб.телефон</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="form_field_phone" class="form-control" id="InputPhone" placeholder="+7">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="InputEmail">Электронная почта</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="form_field_email" class="form-control form-group_last-input" id="InputEmail">
+                        </div>
+                    </div>
+
+                    <div class="form-group application-form-footer">
+                        <div class="col-sm-offset-3 col-sm-6 checkbox">
+                            <label><input type="checkbox" id="check"><span>Ставя эту галочку, я подтверждаю, что поставил её&shy; в трезвом уме и твёрдой памяти.</span></label>
+                        </div>
+                        <button id="submit-form" class="col-sm-offset-3 application-form-footer__button" type="submit" disabled>Полететь на Марс</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+    <script src="js/script.js"></script>
+    <script>
+        $(function() {
+            $("#InputPhone").mask("+7 (999) 999-99-99");
+        });
+    </script>
+</body>
+
+</html>
