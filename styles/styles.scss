@@ -1,20 +1,17 @@
 //base
 $color: #000;
-$font-family: 'Lucida Sans Unicode',
-sans-serif;
+$font-family: 'Lucida Sans Unicode', sans-serif;
 $font-weight-bold: bold;
 $font-size-h1: 2.5em;
 $font-size-form_text: .9em;
 
-//button
+//mixin
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
 }
-
-$color-button-text: #555;
 
 //----
 h1 {
@@ -27,11 +24,11 @@ h3 {
     line-height: normal;
 }
 
-.question-header {
+.question {
     margin-top: 0
 }
 
-.application-form {
+.app-form {
     padding-top: 40px;
     background: rgb(237, 211, 210);
     background: -moz-linear-gradient(top, rgba(237, 211, 210, 1) 0%, rgba(241, 213, 210, 1) 5%, rgba(244, 214, 212, 1) 6%, rgba(243, 213, 211, 1) 8%, rgba(246, 216, 214, 1) 8%, rgba(248, 217, 215, 1) 12%, rgba(253, 217, 217, 1) 13%, rgba(252, 216, 216, 1) 15%, rgba(254, 218, 218, 1) 15%, rgba(252, 218, 217, 1) 16%, rgba(255, 219, 219, 1) 18%, rgba(253, 217, 217, 1) 19%, rgba(255, 224, 222, 1) 21%, rgba(254, 222, 223, 1) 23%, rgba(255, 227, 226, 1) 25%, rgba(254, 228, 227, 1) 32%, rgba(255, 231, 231, 1) 35%, rgba(255, 229, 228, 1) 36%, rgba(254, 233, 230, 1) 37%, rgba(255, 234, 233, 1) 37%, rgba(255, 234, 233, 1) 42%, rgba(255, 232, 230, 1) 44%, rgba(255, 231, 231, 1) 44%, rgba(255, 234, 233, 1) 45%, rgba(255, 231, 231, 1) 49%, rgba(255, 234, 233, 1) 53%, rgba(255, 231, 229, 1) 54%, rgba(255, 232, 232, 1) 57%, rgba(255, 231, 231, 1) 62%, rgba(255, 234, 233, 1) 63%, rgba(255, 234, 233, 1) 65%, rgba(255, 232, 230, 1) 66%, rgba(253, 232, 231, 1) 71%, rgba(255, 234, 233, 1) 72%, rgba(254, 233, 230, 1) 74%, rgba(255, 234, 233, 1) 75%, rgba(254, 233, 232, 1) 77%, rgba(252, 231, 230, 1) 77%, rgba(255, 231, 231, 1) 77%, rgba(255, 234, 233, 1) 79%, rgba(255, 232, 230, 1) 81%, rgba(255, 234, 233, 1) 84%, rgba(255, 231, 229, 1) 84%, rgba(255, 234, 233, 1) 85%, rgba(254, 233, 232, 1) 87%, rgba(255, 231, 229, 1) 87%, rgba(255, 234, 233, 1) 89%, rgba(255, 232, 230, 1) 93%, rgba(255, 233, 235, 1) 94%, rgba(254, 233, 230, 1) 95%, rgba(254, 233, 232, 1) 96%, rgba(255, 231, 229, 1) 96%, rgba(255, 234, 233, 1) 98%, rgba(255, 232, 232, 1) 100%);
@@ -40,7 +37,7 @@ h3 {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edd3d2', endColorstr='#ffe8e8', GradientType=0);
 }
 
-.application-form-footer {
+.app-form-down {
     height: 178px;
     padding-top: 25px;
     background: rgb(215, 203, 215);
@@ -50,7 +47,7 @@ h3 {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7cbd7', endColorstr='#a6b1cd', GradientType=0);
 }
 
-.application-form-footer__button {
+.app-form-down__button {
     position: relative;
     left: 15px;
     top: 15px;
@@ -61,7 +58,7 @@ h3 {
     font-size: 1.8em;
     font-family: 'Lucida Sans Unicode', sans-serif;
     color: #a1a2a7;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
     text-shadow: 1px 1px 0 rgba(255, 241, 234, 0.55);
 
     background: #efeef3;
@@ -76,15 +73,15 @@ h3 {
     @include border-radius(17px);
 }
 
-.application-form-footer__button,
-.application-form-footer__button:active,
-.application-form-footer__button:focus {
+.app-form-down__button,
+.app-form-down__button:active,
+.app-form-down__button:focus {
     outline: none;
 }
 
 .button_checkin {
     cursor: pointer;
-    color: #000;
+    color: $color;
     background: rgb(255, 255, 255);
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(253, 253, 253, 1) 11%, rgba(246, 246, 246, 1) 28%, rgba(245, 245, 245, 1) 49%, rgba(241, 241, 241, 1) 51%, rgba(240, 240, 240, 1) 53%, rgba(234, 234, 234, 1) 66%, rgba(232, 232, 232, 1) 77%, rgba(239, 239, 239, 1) 91%, rgba(254, 254, 254, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(253, 253, 253, 1) 11%, rgba(246, 246, 246, 1) 28%, rgba(245, 245, 245, 1) 49%, rgba(241, 241, 241, 1) 51%, rgba(240, 240, 240, 1) 53%, rgba(234, 234, 234, 1) 66%, rgba(232, 232, 232, 1) 77%, rgba(239, 239, 239, 1) 91%, rgba(254, 254, 254, 1) 100%);
@@ -96,38 +93,28 @@ h3 {
     transition: all 0.3s;
 }
 
-
 label {
     font-weight: normal;
 }
-
+.form-group > label {
+    font-family: $font-family;
+}
 .form-horizontal .control-label {
     text-align: left;
     padding-top: 10px;
-    font-size: .9em;
+    font-size: $font-size-form_text;
     color: $color;
 }
-
-.form-control {
-    @include border-radius(0px);
-}
-
 .form-horizontal .form-group {
     margin-left: 0;
     margin-right: 0;
 }
-
-#check + span,
-.checkFamily + span {
-    display: inline;
-    line-height: .6;
-    font-family: $font-family;
-    font-size: .9em;
-    color: #000;
-}
-
-.form-group > label {
-    font-family: $font-family;
+.form-control {
+    color: $color;
+    font-family: Arial, sans-serif;
+    box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.5);
+    font-size: 1.4em;
+    @include border-radius(0px);
 }
 
 .checkFamily {
@@ -135,13 +122,13 @@ label {
     position: relative;
     top: 2px;
 }
-
+#check + span,
 .checkFamily + span {
     cursor: pointer;
-}
-
-input[type="checkbox"] {
-    margin-right: 5px;
+    line-height: .6;
+    font-family: $font-family;
+    font-size: $font-size-form_text;
+    color: $color;
 }
 
 .help-block {
@@ -149,12 +136,13 @@ input[type="checkbox"] {
     z-index: 2;
     font-family: $font-family;
     color: $color;
-    font-size: .9em;
+    font-size: $font-size-form_text;
     margin-top: 10px;
     margin-left: -15px;
     margin-right: -15px;
     overflow: hidden;
-} //shadows 2
+}
+//shadow help-block
 .help-block__shadow-down {
     position: relative;
     padding: 10px;
@@ -182,65 +170,14 @@ input[type="checkbox"] {
     transform: rotate(-1deg);
 
 }
-
-
 .form-group_last-input {
     margin-bottom: 25px;
-}
-
-//select, option
-select,
-option:checked {
-    background: #fff;
-    color: #000;
-}
-
-option {
-    color: black;
-}
-
-//shadows
-@media all and (min-width:769px) {
-    .drop-shadow {
-        position: relative;
-    }
-
-    .drop-shadow:before,
-    .drop-shadow:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-
-        top: 15px;
-        left: 20px;
-        height: 80%;
-        width: 1px;
-
-        box-shadow: -6px 15px 10px 14px rgba(238, 211, 210, 1);
-        /*, -9px 12px 7px 12px #fff; /*#eed3d2*/
-        transform: rotate(-2deg);
-    }
-    .drop-shadow:after {
-        left: auto;
-        right: 20px;
-        box-shadow: 6px 15px 10px 14px rgba(238, 211, 210, 1);
-        transform: rotate(2deg);
-
-    }
-
-}
-
-@media all and (min-width:769px) {
-    .form-horizontal .control-label {
-        padding-left: 30px;
-    }
 }
 
 //radio button male female
 input[name="form_field_gender"] {
     display: none;
 }
-
 .male,
 .female {
     display: inline-block;
@@ -248,7 +185,7 @@ input[name="form_field_gender"] {
     margin: 0;
     cursor: pointer;
     font-family: 'Lucida Sans Unicode', sans-serif;
-    font-size: .9em;
+    font-size: $font-size-form_text;
     border: 1px solid #9e9fa1;
     background: rgb(255, 253, 254);
     background: -moz-linear-gradient(top, rgba(255, 253, 254, 1) 0%, rgba(243, 241, 242, 1) 33%, rgba(239, 239, 239, 1) 50%, rgba(224, 224, 224, 1) 54%, rgba(250, 250, 248, 1) 100%);
@@ -270,7 +207,13 @@ input[name="form_field_gender"] {
     -ms-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
 }
-
+input {
+    color: black;
+    font-size: 1.2em
+}
+input[type="checkbox"] {
+    margin-right: 5px;
+}
 input[name="form_field_gender"]:checked + .male,
 input[name="form_field_gender"]:checked + .female {
     color: #fff;
@@ -281,45 +224,62 @@ input[name="form_field_gender"]:checked + .female {
     background: linear-gradient(to bottom, rgba(97, 96, 94, 1) 0%, rgba(114, 114, 112, 1) 29%, rgba(119, 119, 117, 1) 33%, rgba(129, 128, 126, 1) 50%, rgba(133, 133, 131, 1) 54%, rgba(154, 154, 152, 1) 88%, rgba(164, 164, 162, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61605e', endColorstr='#a4a4a2', GradientType=0);
 }
-
+//placeholders
 #InputPhone::-webkit-input-placeholder {
     color: darkgrey;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
 }
 
 #InputPhone:-moz-placeholder {
     color: darkgrey;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
 }
 
 #InputPhone::-moz-placeholder {
     color: darkgrey;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
 }
 
 #InputPhone:-ms-input-placeholder {
     color: darkgrey;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
 }
 
 #InputPhone {
     padding: 6px 6px;
 }
 
-.form-control {
-    color: #000;
-    font-family: Arial;
-    box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.5);
-    font-size: 1.4em
+//media 
+@media all and (min-width:769px) {
+    //shadow app-form
+    .drop-shadow {
+        position: relative;
+    }
+
+    .drop-shadow:before,
+    .drop-shadow:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+
+        top: 15px;
+        left: 20px;
+        height: 80%;
+        width: 1px;
+
+        box-shadow: -6px 15px 10px 14px rgba(238, 211, 210, 1);
+        transform: rotate(-2deg);
+    }
+    .drop-shadow:after {
+        left: auto;
+        right: 20px;
+        box-shadow: 6px 15px 10px 14px rgba(238, 211, 210, 1);
+        transform: rotate(2deg);
+
+    }
+        .form-horizontal .control-label {
+        padding-left: 30px;
+    }
+
 }
 
-/*
-input:not(#InputPhone)::-webkit-input-placeholder {color: red;}
-input:not(#InputPhone):-moz-placeholder {color: red;}
-input:not(#InputPhone)::-moz-placeholder {color: red;}
-input:not(#InputPhone):-ms-input-placeholder {color: red;}*/
-
-input {
-    color: black;
-    font-size: 1.2em
-}

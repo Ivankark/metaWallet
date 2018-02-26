@@ -6,10 +6,10 @@ h3 {
   font-weight: bold;
   line-height: normal; }
 
-.question-header {
+.question {
   margin-top: 0; }
 
-.application-form {
+.app-form {
   padding-top: 40px;
   background: #edd3d2;
   background: -moz-linear-gradient(top, #edd3d2 0%, #f1d5d2 5%, #f4d6d4 6%, #f3d5d3 8%, #f6d8d6 8%, #f8d9d7 12%, #fdd9d9 13%, #fcd8d8 15%, #fedada 15%, #fcdad9 16%, #ffdbdb 18%, #fdd9d9 19%, #ffe0de 21%, #fededf 23%, #ffe3e2 25%, #fee4e3 32%, #ffe7e7 35%, #ffe5e4 36%, #fee9e6 37%, #ffeae9 37%, #ffeae9 42%, #ffe8e6 44%, #ffe7e7 44%, #ffeae9 45%, #ffe7e7 49%, #ffeae9 53%, #ffe7e5 54%, #ffe8e8 57%, #ffe7e7 62%, #ffeae9 63%, #ffeae9 65%, #ffe8e6 66%, #fde8e7 71%, #ffeae9 72%, #fee9e6 74%, #ffeae9 75%, #fee9e8 77%, #fce7e6 77%, #ffe7e7 77%, #ffeae9 79%, #ffe8e6 81%, #ffeae9 84%, #ffe7e5 84%, #ffeae9 85%, #fee9e8 87%, #ffe7e5 87%, #ffeae9 89%, #ffe8e6 93%, #ffe9eb 94%, #fee9e6 95%, #fee9e8 96%, #ffe7e5 96%, #ffeae9 98%, #ffe8e8 100%);
@@ -19,7 +19,7 @@ h3 {
   background: linear-gradient(to bottom, #edd3d2 0%, #f1d5d2 5%, #f4d6d4 6%, #f3d5d3 8%, #f6d8d6 8%, #f8d9d7 12%, #fdd9d9 13%, #fcd8d8 15%, #fedada 15%, #fcdad9 16%, #ffdbdb 18%, #fdd9d9 19%, #ffe0de 21%, #fededf 23%, #ffe3e2 25%, #fee4e3 32%, #ffe7e7 35%, #ffe5e4 36%, #fee9e6 37%, #ffeae9 37%, #ffeae9 42%, #ffe8e6 44%, #ffe7e7 44%, #ffeae9 45%, #ffe7e7 49%, #ffeae9 53%, #ffe7e5 54%, #ffe8e8 57%, #ffe7e7 62%, #ffeae9 63%, #ffeae9 65%, #ffe8e6 66%, #fde8e7 71%, #ffeae9 72%, #fee9e6 74%, #ffeae9 75%, #fee9e8 77%, #fce7e6 77%, #ffe7e7 77%, #ffeae9 79%, #ffe8e6 81%, #ffeae9 84%, #ffe7e5 84%, #ffeae9 85%, #fee9e8 87%, #ffe7e5 87%, #ffeae9 89%, #ffe8e6 93%, #ffe9eb 94%, #fee9e6 95%, #fee9e8 96%, #ffe7e5 96%, #ffeae9 98%, #ffe8e8 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edd3d2', endColorstr='#ffe8e8', GradientType=0); }
 
-.application-form-footer {
+.app-form-down {
   height: 178px;
   padding-top: 25px;
   background: #d7cbd7;
@@ -30,7 +30,7 @@ h3 {
   background: linear-gradient(to bottom, #d7cbd7 0%, #d3c8d8 12%, #cfc7d6 15%, #cfc6d7 19%, #cbc4d4 24%, #cbc4d6 29%, #c5c1d2 37%, #c5c2d5 37%, #c2bfd2 44%, #c2c0d5 45%, #bebcd1 52%, #b9bbd2 63%, #b0b6ce 79%, #b1b7d1 80%, #afb5cf 81%, #adb4d0 89%, #a6b1cd 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7cbd7', endColorstr='#a6b1cd', GradientType=0); }
 
-.application-form-footer__button {
+.app-form-down__button {
   position: relative;
   left: 15px;
   top: 15px;
@@ -56,9 +56,9 @@ h3 {
   -ms-border-radius: 17px;
   border-radius: 17px; }
 
-.application-form-footer__button,
-.application-form-footer__button:active,
-.application-form-footer__button:focus {
+.app-form-down__button,
+.app-form-down__button:active,
+.app-form-down__button:focus {
   outline: none; }
 
 .button_checkin {
@@ -79,50 +79,49 @@ h3 {
 label {
   font-weight: normal; }
 
+.form-group > label {
+  font-family: "Lucida Sans Unicode", sans-serif; }
+
 .form-horizontal .control-label {
   text-align: left;
   padding-top: 10px;
-  font-size: .9em;
+  font-size: 0.9em;
   color: #000; }
-
-.form-control {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  border-radius: 0px; }
 
 .form-horizontal .form-group {
   margin-left: 0;
   margin-right: 0; }
 
-#check + span,
-.checkFamily + span {
-  display: inline;
-  line-height: .6;
-  font-family: "Lucida Sans Unicode", sans-serif;
-  font-size: .9em;
-  color: #000; }
-
-.form-group > label {
-  font-family: "Lucida Sans Unicode", sans-serif; }
+.form-control {
+  color: #000;
+  font-family: Arial, sans-serif;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1.4em;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px; }
 
 .checkFamily {
   display: inline-block;
   position: relative;
   top: 2px; }
 
+#check + span,
 .checkFamily + span {
-  cursor: pointer; }
-
-input[type="checkbox"] {
-  margin-right: 5px; }
+  cursor: pointer;
+  line-height: .6;
+  font-family: "Lucida Sans Unicode", sans-serif;
+  font-size: 0.9em;
+  color: #000; }
 
 .help-block {
   position: relative;
   z-index: 2;
   font-family: "Lucida Sans Unicode", sans-serif;
   color: #000;
-  font-size: .9em;
+  font-size: 0.9em;
   margin-top: 10px;
   margin-left: -15px;
   margin-right: -15px;
@@ -158,45 +157,6 @@ input[type="checkbox"] {
 .form-group_last-input {
   margin-bottom: 25px; }
 
-select,
-option:checked {
-  background: #fff;
-  color: #000; }
-
-option {
-  color: black; }
-
-@media all and (min-width: 769px) {
-  .drop-shadow {
-    position: relative; }
-  .drop-shadow:before,
-  .drop-shadow:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 15px;
-    left: 20px;
-    height: 80%;
-    width: 1px;
-    -webkit-box-shadow: -6px 15px 10px 14px #eed3d2;
-    box-shadow: -6px 15px 10px 14px #eed3d2;
-    /*, -9px 12px 7px 12px #fff; /*#eed3d2*/
-    -webkit-transform: rotate(-2deg);
-    -ms-transform: rotate(-2deg);
-    transform: rotate(-2deg); }
-  .drop-shadow:after {
-    left: auto;
-    right: 20px;
-    -webkit-box-shadow: 6px 15px 10px 14px #eed3d2;
-    box-shadow: 6px 15px 10px 14px #eed3d2;
-    -webkit-transform: rotate(2deg);
-    -ms-transform: rotate(2deg);
-    transform: rotate(2deg); } }
-
-@media all and (min-width: 769px) {
-  .form-horizontal .control-label {
-    padding-left: 30px; } }
-
 input[name="form_field_gender"] {
   display: none; }
 
@@ -207,7 +167,7 @@ input[name="form_field_gender"] {
   margin: 0;
   cursor: pointer;
   font-family: 'Lucida Sans Unicode', sans-serif;
-  font-size: .9em;
+  font-size: 0.9em;
   border: 1px solid #9e9fa1;
   background: #fffdfe;
   background: -moz-linear-gradient(top, #fffdfe 0%, #f3f1f2 33%, #efefef 50%, #e0e0e0 54%, #fafaf8 100%);
@@ -228,6 +188,13 @@ input[name="form_field_gender"] {
   -moz-border-radius: 0 5px 5px 0;
   -ms-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0; }
+
+input {
+  color: black;
+  font-size: 1.2em; }
+
+input[type="checkbox"] {
+  margin-right: 5px; }
 
 input[name="form_field_gender"]:checked + .male,
 input[name="form_field_gender"]:checked + .female {
@@ -260,18 +227,30 @@ input[name="form_field_gender"]:checked + .female {
 #InputPhone {
   padding: 6px 6px; }
 
-.form-control {
-  color: #000;
-  font-family: Arial;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.5);
-  font-size: 1.4em; }
-
-/*
-input:not(#InputPhone)::-webkit-input-placeholder {color: red;}
-input:not(#InputPhone):-moz-placeholder {color: red;}
-input:not(#InputPhone)::-moz-placeholder {color: red;}
-input:not(#InputPhone):-ms-input-placeholder {color: red;}*/
-input {
-  color: black;
-  font-size: 1.2em; }
+@media all and (min-width: 769px) {
+  .drop-shadow {
+    position: relative; }
+  .drop-shadow:before,
+  .drop-shadow:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: 20px;
+    height: 80%;
+    width: 1px;
+    -webkit-box-shadow: -6px 15px 10px 14px #eed3d2;
+    box-shadow: -6px 15px 10px 14px #eed3d2;
+    -webkit-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg); }
+  .drop-shadow:after {
+    left: auto;
+    right: 20px;
+    -webkit-box-shadow: 6px 15px 10px 14px #eed3d2;
+    box-shadow: 6px 15px 10px 14px #eed3d2;
+    -webkit-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg); }
+  .form-horizontal .control-label {
+    padding-left: 30px; } }
