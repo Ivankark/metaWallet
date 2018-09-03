@@ -1,0 +1,183 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    border: none;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+a,
+img,
+button {
+    outline: none;
+}
+
+img {
+    border-style: none;
+    max-width: 100%;
+}
+
+header,
+section,
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    position: relative;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 375px;
+    border: 1px solid white;
+    background: #0B1C37 url("img/earth-2x.jpg") no-repeat center top;
+    background-size: contain;
+}
+
+.warning {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #FB5E5B;
+    height: 75px;
+}
+
+.warning__tips {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 0.8125em;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+}
+
+.warning__tips::before {
+    content: url('img/icon-fire.svg');
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
+
+.title {
+    margin-top: 134px;
+    font-size: 2.3152em;
+    /* 16px/37px */
+    font-weight: 100;
+    line-height: normal;
+    color: #FFF;
+}
+
+.title > .title__one-word {
+    color: #99CEFF;
+}
+
+#round-button_fail {
+    margin-top: 97px;
+}
+
+.connect-text {
+    margin-top: 54px;
+    text-transform: uppercase;
+    font-size: 0.9375em;
+    /* 15px/16px */
+    font-weight: 500;
+    line-height: normal;
+    color: #FFF;
+}
+
+.info-tips-text {
+    display: inline-block;
+    margin: 14px 55px 0 55px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.875em;
+    /* 14px */
+    color: rgba(153, 206, 255, 0.5);
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+#button {
+    margin-top: 54px;
+    width: 158px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 56px;
+    background-color: transparent;
+}
+
+#button .text {
+    text-transform: uppercase;
+    font-size: 0.625em;
+    /* 10px */
+    color: #fff;
+}
+
+.block-text {
+    margin-top: 32px;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 12px;
+    font-size: 0.625em;
+    /* 10px */
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+    margin-top: 39px;
+    width: 114px;
+    height: 23px;
+}
+
+.version {
+    padding-top: 19px;
+    padding-bottom: 26px;
+    color: rgba(153, 206, 255, 0.5);
+    font-weight: 400;
+    font-size: 0.75em;
+    /* 12px/16px */
+}
+
+@media screen and (orientation: portrait) {
+    .container {
+        max-width: 377px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .container {
+        max-width: 814px;
+        /* Iphone X - 812px */
+    }
+}

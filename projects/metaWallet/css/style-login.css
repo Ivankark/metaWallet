@@ -1,0 +1,266 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    border: none;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+a,
+img,
+button,
+input {
+    outline: none;
+}
+
+img {
+    border-style: none;
+    max-width: 100%;
+}
+
+header,
+section,
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    position: relative;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 375px;
+    border: 1px solid white;
+    background: #0B1C37 url("img/earth-2x.jpg") no-repeat center top;
+    background-size: contain;
+    position: relative;
+    z-index: 0;
+}
+
+.container::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: scale(-1, 1);
+    background: url("img/earth-2x.jpg") no-repeat center top;
+    background-size: contain;
+}
+
+.title {
+    margin-top: 134px;
+    font-size: 2.3152em;
+    /* 16px/37px */
+    font-weight: 100;
+    line-height: normal;
+    color: #FFF;
+}
+
+.title > .title__one-word {
+    color: #99CEFF;
+}
+
+.create-account {
+    margin-top: 53px;
+    margin-left: 17px;
+    margin-right: 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.create-account__text {
+    color: #fff;
+    font-size: 1em;
+    /* 16/16px */
+    font-weight: 300;
+}
+
+#create-account-button {
+    width: 151px;
+    height: 43px;
+    border: none;
+    border-radius: 25px;
+    background-color: #0A4982;
+    cursor: pointer;
+}
+
+.create-account-button__text {
+    color: #99CEFF;
+    font-size: 0.725em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.create-account-button__text::after {
+    content: url('img/icon-key.svg');
+    position: relative;
+    top: 3px;
+    left: 10px;
+}
+
+.form {
+    margin-top: 22px;
+}
+
+#email,
+#password,
+#confirm-passoword {
+    width: 90.9334%;
+    margin: 18.5px 4.5333%;
+    /* 17/375px */
+    height: 65px;
+    border: 1px solid rgba(153, 206, 255, 0.3);
+    border-radius: 67px;
+    padding: 0 22px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #81BEF7;
+}
+
+#form-sign-up > ::-ms-input-placeholder {
+    color: #81BEF7;
+}
+
+#form-sign-up > :-moz-placeholder {
+    color: #81BEF7;
+}
+
+#form-sign-up > ::-moz-placeholder {
+    color: #81BEF7;
+}
+
+#form-sign-up > ::-webkit-input-placeholder {
+    color: #81BEF7;
+}
+
+#form-sign-up > input::placeholder {
+    color: #81BEF7;
+}
+
+#email {
+    background: #071229 url('img/icon-email.svg') no-repeat 94% 50%;
+}
+
+#password {
+    background: #071229 url('img/icon-lock.svg') no-repeat 94% 50%;
+}
+
+#confirm-passoword {
+    background: #071229 url('img/icon-lock.svg') no-repeat 94% 50%;
+}
+
+
+/* Верхний слой */
+
+#button-continue {
+    margin-top: 42px;
+    width: 303px;
+    height: 54px;
+    border: 3px solid transparent;
+    border-radius: 56px;
+    background-color: rgba(11, 27, 55, 1);
+    position: relative;
+    cursor: pointer;
+
+}
+
+/* нижний слой (Градиент) */
+
+#button-continue::after {
+    content: "";
+    display: block;
+    width: 309.14px;
+    height: 60px;
+    position: absolute;
+    z-index: -5;
+    top: -6px;
+    left: -6px;
+
+    border-radius: 56px;
+    background-image: radial-gradient(circle closest-side at 40% -40px, rgba(255, 255, 255, 1), rgba(31, 119, 200, 1) 120px);
+}
+
+.button-continue__text {
+    text-transform: uppercase;
+    font-size: 0.875em;
+    color: #99CEFF;
+    font-weight: 400;
+}
+
+.button-continue__text::after {
+    content: url('img/icon-continue.svg');
+    position: relative;
+    top: 3px;
+    left: 10px;
+}
+
+
+.logo {
+    margin-top: 121px;
+    width: 90px;
+    height: 13px;
+}
+
+.version {
+    padding-top: 19px;
+    padding-bottom: 26px;
+    color: rgba(153, 206, 255, 0.5);
+    font-weight: 400;
+    font-size: 0.75em;
+    /* 12px/16px */
+}
+
+@media screen and (orientation: portrait) {
+    .container {
+        max-width: 377px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .container {
+        max-width: 814px;
+        /* Iphone X - 812px */
+    }
+    .container::before {
+        background-size: cover;
+    }
+    #button-continue::after {
+        z-index: -1;
+    }
+}
